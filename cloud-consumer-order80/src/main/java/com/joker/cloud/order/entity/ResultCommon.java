@@ -1,4 +1,4 @@
-package com.joker.cloud.payment.entity;
+package com.joker.cloud.order.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

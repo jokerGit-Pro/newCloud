@@ -4,6 +4,8 @@ package com.joker.cloud.payment.controller;
 import com.joker.cloud.payment.entity.Payment;
 import com.joker.cloud.payment.entity.ResultCommon;
 import com.joker.cloud.payment.service.PaymentService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,12 +21,14 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 @RestController
 @RequestMapping("/payment")
+@Api(tags = "支付管理")
 public class PaymentController {
 
     @Autowired
     private PaymentService paymentService;
 
     @PostMapping("create")
+    @ApiOperation("新增支付记录")
     public ResultCommon save(@RequestBody Payment payment){
         paymentService.save(payment);
         log.info("插入数据库成功");
@@ -32,10 +36,13 @@ public class PaymentController {
     }
 
     @GetMapping("get/{id}")
+    @ApiOperation("查询支付记录")
     public ResultCommon<Payment> getPayment(@PathVariable Long id){
         Payment byId = paymentService.getById(id);
         return new ResultCommon<Payment>(200,"查询成功",byId);
     }
+
+
 
 }
 

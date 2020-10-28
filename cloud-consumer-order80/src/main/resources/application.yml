@@ -1,0 +1,34 @@
+server:
+  port: 80
+
+
+
+spring:
+  application:
+    name: cloud-provider-payment
+
+
+#
+#  datasource:
+#    type: com.zaxxer.hikari.HikariDataSource
+#    driver-class-name: com.mysql.jdbc.Driver
+#    username: root
+#    password: root
+#    url: jdbc:mysql://localhost:3306/mb?useUnicode=true&characterEncoding=utf-8&useSSL=false
+#
+#  hikari:
+#    pool-name: DatebookHikariCP
+#    connection-timeout: 30000
+#    auto-commit: true
+#    max-lifetime: 1800000
+#    minimum-idle: 5
+#    connection-test-query: SELECT 1
+#    idle-timeout: 30000
+#    maximum-pool-size: 15
+#
+#mybatis-plus:
+#  mapper-locations: classpath:mapper/*.xml
+#  type-aliases-package: com.joker.cloud.payment.entity
+#
+swagger:
+  enable: true
