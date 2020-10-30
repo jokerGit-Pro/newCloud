@@ -1,6 +1,7 @@
 package com.joker.cloud.payment.service;
 
-import com.joker.cloud.payment.entity.Payment;
+import com.joker.cloud.entity.Payment;
+import com.joker.cloud.entity.Payment;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

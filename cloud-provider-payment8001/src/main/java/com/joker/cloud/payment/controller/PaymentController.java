@@ -1,8 +1,8 @@
 package com.joker.cloud.payment.controller;
 
 
-import com.joker.cloud.payment.entity.Payment;
-import com.joker.cloud.payment.entity.ResultCommon;
+import com.joker.cloud.entity.Payment;
+import com.joker.cloud.entity.ResultCommon;
 import com.joker.cloud.payment.service.PaymentService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

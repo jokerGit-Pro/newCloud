@@ -1,4 +1,4 @@
-package com.joker.cloud.order.entity;
+package com.joker.cloud.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,6 +1,6 @@
 package com.joker.cloud.payment.mapper;
 
-import com.joker.cloud.payment.entity.Payment;
+import com.joker.cloud.entity.Payment;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

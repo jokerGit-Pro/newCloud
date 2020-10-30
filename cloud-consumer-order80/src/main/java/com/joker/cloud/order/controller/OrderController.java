@@ -1,7 +1,7 @@
 package com.joker.cloud.order.controller;
 
-import com.joker.cloud.order.entity.Payment;
-import com.joker.cloud.order.entity.ResultCommon;
+import com.joker.cloud.entity.Payment;
+import com.joker.cloud.entity.ResultCommon;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
