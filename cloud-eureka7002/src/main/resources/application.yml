@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: cloud-eureka-server
+
+
+server:
+  port: 7002
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://cloud-eureka-server:7001/eureka/,http://localhost:7002/eureka/
