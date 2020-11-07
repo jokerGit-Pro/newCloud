@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cloud-common" />
+        <module name="cloud-consumer-feign-hystrix-order80" />
         <module name="cloud-consumer-order80" />
         <module name="cloud-erueka7001" />
         <module name="cloud-eureka7002" />
         <module name="cloud-eureka7003" />
+        <module name="cloud-provider-hystrix-payment8001" />
         <module name="cloud-provider-payment8001" />
         <module name="cloud-provider-payment8002" />
       </profile>
