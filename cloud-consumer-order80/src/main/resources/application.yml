@@ -1,11 +1,12 @@
 server:
-  port: 80
+  port: 8100
 
 
 
 spring:
   application:
-    name: cloud-provider-payment
+    name: cloud-consumer-order
+
 
 
 #
@@ -28,7 +29,17 @@ spring:
 #
 #mybatis-plus:
 #  mapper-locations: classpath:mapper/*.xml
-#  type-aliases-package: com.joker.cloud.payment.entity
+#  type-aliases-package: com.joker.cloud.com.joker.cloud.payment.payment.entity
 #
 swagger:
   enable: true
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://www.eureka1.com:7001/eureka/,http://www.eureka2.com:7002/eureka/,http://www.eureka3.com:7003/eureka/
+  instance:
+    prefer-ip-address: true

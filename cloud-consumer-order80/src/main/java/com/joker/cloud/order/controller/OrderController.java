@@ -24,19 +24,19 @@ import javax.annotation.Resource;
 @Api(tags = "订单接口")
 public class OrderController {
 
-    public static final String PAYMENT_URL="http://localhost:8001";
+    public static final String PAYMENT_URL="http://CLOUD-PROVIDER-PAYMENT";
 
     @Resource
     private RestTemplate restTemplate;
 
-    @GetMapping("payment/create")
+    @GetMapping("create")
     @ApiOperation("远程调用添加操作")
     public ResultCommon create(Payment payment){
 
         return restTemplate.postForObject(PAYMENT_URL+"/payment/create",payment,ResultCommon.class);
     }
 
-    @GetMapping("payment/get/{id}")
+    @GetMapping("get/{id}")
     @ApiOperation("远程调用查找操作")
     public ResultCommon<Payment> getPayment(@PathVariable("id")Long id){
         return restTemplate.getForObject(PAYMENT_URL+"/payment/get/"+id,ResultCommon.class);

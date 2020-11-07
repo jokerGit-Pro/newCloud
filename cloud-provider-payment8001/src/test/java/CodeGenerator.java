@@ -43,7 +43,7 @@ public class CodeGenerator {
 
     // 4、包配置
     PackageConfig pc = new PackageConfig();
-    pc.setModuleName("payment"); // 模块名
+    pc.setModuleName("com.joker.cloud.payment.payment"); // 模块名
     pc.setParent("com.joker.cloud");
     pc.setController("controller");
     pc.setEntity("entity");
@@ -53,7 +53,7 @@ public class CodeGenerator {
 
     // 5、策略配置
     StrategyConfig strategy = new StrategyConfig();
-    strategy.setInclude("payment");
+    strategy.setInclude("com.joker.cloud.payment.payment");
 
     strategy.setNaming(NamingStrategy.underline_to_camel); // 数据库表映射到实体的命名策略
     strategy.setTablePrefix(pc.getModuleName() + "_"); // 生成实体时去掉表前缀

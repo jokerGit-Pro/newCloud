@@ -1,0 +1,13 @@
+server:
+  port: 7003
+
+spring:
+  application:
+    name: cloud-eureka-server
+
+eureka:
+  client:
+    fetch-registry: false #拉取注册信息
+    register-with-eureka: false
+    serviceUrl:
+      defaultZone: http://localhost:7003/eureka/,http://localhost:7002/eureka/,http://localhost:7001/eureka/

@@ -10,7 +10,9 @@
         <module name="cloud-consumer-order80" />
         <module name="cloud-erueka7001" />
         <module name="cloud-eureka7002" />
+        <module name="cloud-eureka7003" />
         <module name="cloud-provider-payment8001" />
+        <module name="cloud-provider-payment8002" />
       </profile>
     </annotationProcessing>
   </component>

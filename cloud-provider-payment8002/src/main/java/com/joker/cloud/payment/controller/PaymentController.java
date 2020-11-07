@@ -36,14 +36,14 @@ public class PaymentController {
     public ResultCommon save(@RequestBody Payment payment){
         paymentService.save(payment);
         log.info("插入数据库成功");
-        return new ResultCommon(200,"插入数据库成功,端口："+port,1);
+        return new ResultCommon(200,"插入数据库成功,端口为："+port,1);
     }
 
     @GetMapping("get/{id}")
     @ApiOperation("查询支付记录")
     public ResultCommon<Payment> getPayment(@PathVariable Long id){
         Payment byId = paymentService.getById(id);
-        return new ResultCommon<Payment>(200,"查询成功,端口："+port,byId);
+        return new ResultCommon<Payment>(200,"查询成功,端口为："+port,byId);
     }
 
 
