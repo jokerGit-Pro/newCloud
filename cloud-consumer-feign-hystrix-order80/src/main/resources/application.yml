@@ -16,3 +16,8 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://www.eureka1.com:7001/eureka/
+feign:
+  hystrix:
+    enabled: true
+
+
