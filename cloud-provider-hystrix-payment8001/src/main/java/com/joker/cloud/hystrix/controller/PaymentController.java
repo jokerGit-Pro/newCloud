@@ -36,4 +36,11 @@ public class PaymentController {
     log.info("******************调用超时  result: " + msg);
     return msg;
   }
+
+  @GetMapping("payment/cirCuit/{id}")
+  public String paymenyCircuitBreaker(@PathVariable("id") Integer id) {
+    String msg = paymentService.payCircuitBreaker(id);
+    log.info("******************调用断路方法 " + msg);
+    return msg;
+  }
 }
