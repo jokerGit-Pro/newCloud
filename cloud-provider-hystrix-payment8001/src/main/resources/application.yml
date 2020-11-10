@@ -7,7 +7,6 @@ spring:
     name: cloud-provider-hystrix-payment8001
 
 
-
 eureka:
   client:
     healthcheck:
@@ -16,3 +15,5 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://www.eureka1.com:7001/eureka/
+
+

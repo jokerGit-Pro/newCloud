@@ -12,9 +12,12 @@
         <module name="cloud-erueka7001" />
         <module name="cloud-eureka7002" />
         <module name="cloud-eureka7003" />
+        <module name="cloud-geteway-gateway9527" />
         <module name="cloud-provider-hystrix-payment8001" />
         <module name="cloud-provider-payment8001" />
         <module name="cloud-provider-payment8002" />
+        <module name="cloud-stream-rabbitmq-consumer8802" />
+        <module name="cloud-stream-rabbitmq-provider8001" />
       </profile>
     </annotationProcessing>
   </component>

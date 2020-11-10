@@ -37,6 +37,9 @@ eureka:
       defaultZone: http://www.eureka1.com:7001/eureka/,http://www.eureka2.com:7002/eureka/,http://www.eureka3.com:7003/eureka/
     healthcheck:
       enabled: true
+    instance:
+      instance-id: payment8001
+      prefer-ip-address: true # 将自己的IP地址注册到注册中心
   instance:
     prefer-ip-address:  true # 将自己的IP地址注册到注册中心
     instance-id: payment8001

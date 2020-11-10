@@ -1,0 +1,35 @@
+server:
+  port: 9527
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://www.eureka1.com:7001/eureka
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    hostname: cloud-gateway-service
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true #开启从注册中心动态创建路由的功能，利用微服务名进行路由
+          lower-case-service-id: true
+
+      routes:
+        - id: payment-gateway1
+          uri: lb://cloud-provider-payment
+          predicates:
+            - Path=/payment/get/**
+
+        - id: payment-gateway2
+          uri: lb://cloud-provider-payment
+          predicates:
+            - Path=/payment/lb/**
+            - After=2020-11-08T21:59:59.216+08:00[Asia/Shanghai]
+            - Cookie=userName,joker

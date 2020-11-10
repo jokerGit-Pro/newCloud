@@ -46,7 +46,11 @@ public class PaymentController {
         return new ResultCommon<Payment>(200,"查询成功,端口为："+port,byId);
     }
 
-
+    @GetMapping("lb")
+    @ApiOperation("gateway测试用")
+    public String getPort(){
+        return port;
+    }
 
 }
 

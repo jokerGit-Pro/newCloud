@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.ZonedDateTime;
+
 /**
  * <p>
  *  前端控制器
@@ -46,7 +48,15 @@ public class PaymentController {
         return new ResultCommon<Payment>(200,"查询成功,端口："+port,byId);
     }
 
+    @GetMapping("lb")
+    @ApiOperation("gateway测试用")
+    public String getPort(){
+        return port;
+    }
 
-
+  public static void main(String[] args) {
+      ZonedDateTime now = ZonedDateTime.now();
+      System.out.println(now);
+  }
 }
 

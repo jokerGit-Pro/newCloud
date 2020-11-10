@@ -17,6 +17,9 @@
         <module>cloud-provider-payment8002</module>
         <module>cloud-provider-hystrix-payment8001</module>
         <module>cloud-consumer-feign-hystrix-order80</module>
+        <module>cloud-geteway-gateway9527</module>
+        <module>cloud-stream-rabbitmq-provider8001</module>
+        <module>cloud-stream-rabbitmq-consumer8802</module>
     </modules>
     <packaging>pom</packaging>
 
